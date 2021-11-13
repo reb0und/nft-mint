@@ -34,3 +34,6 @@ yarn.lock
 
 # dist
 dist/
+
+# package-lock
+package-lock.json

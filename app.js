@@ -1,7 +1,7 @@
 const { ethers } = require("ethers");
 const fs = require('fs');
 
-const ABI = require('./data/ABI.json');
+const ABI = require('./ABI.json');
 
 // contract abi which can be found on etherscan - check docs for more info
 
@@ -9,7 +9,7 @@ const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
 
 // file containing private key, custom gwei, and max amount of tokens to mint
 
-const ADDRESS = "0xdb68c12b5cc499461b87c9d4e63d1a299990e1d8";
+const ADDRESS = config.collectionAddress;
 
 // coontract wallet address
 
@@ -17,12 +17,18 @@ const GAS_LIMIT = 2000000;
 
 // gas limit - self explanatory
 
+const INFURA_KEY = config.infuraKey;
+
+// infura key
+
 const GAS_PRICE = ethers.utils.parseUnits(config.gas, "gwei");
 const MAX_AMOUNT = config.maxAmountMint;
 // const TOKEN_PRICE = ethers.utils.parseEther('0');
 const INTERVAL = 500;
 
-const provider = new ethers.providers.JsonRpcProvider('https://mainnet.infura.io/v3/98a14611be3340498aa7bade53439321');
+// how often to check if sale is live
+
+const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${INFURA_KEY}`);
 const wallet = new ethers.Wallet(config.privateKey, provider);
 const contract = new ethers.Contract(ADDRESS, ABI, wallet);
 
