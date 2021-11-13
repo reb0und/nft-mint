@@ -14,3 +14,4 @@ Open up your [config.json](https://github.com/reb0und/nft-mint/blob/main/config.
  - infuraKey: [Here](https://ethereumico.io/knowledge-base/infura-api-key-guide/) is a tutorial on how to retrieve your [Infura Key](https://infura.io/dashboard). This allows you to connect to the Ethereum network
  - collectionAdress: the address of the collection you wish to mint
 
+**Run `npm mint` to start**
