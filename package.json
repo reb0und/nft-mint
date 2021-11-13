@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "ethers": "^5.4.7"
+  },
+  "scripts": {
+    "mint": "node appp.js"
+  },
+  "bin": "app.js",
+  "pkg": {
+    "scripts": "./app.js"
+  }
+}
