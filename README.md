@@ -2,7 +2,9 @@
 
 ## NFT Ethereum Minter Tutorial
 
-Created this as an example to show how to mint an NFT on the Etereum Mainnet through NodeJS, stars are appreciated. 
+⚠️ Very old project, most likely still functional but code is example for minting process not learning. 
+
+Created this as an example to show how to mint an NFT on the Ethereum Mainnet through NodeJS.
 
 
 **Setup**
@@ -18,6 +20,4 @@ In order to run you must configure the [ABI.json file](https://github.com/reb0un
 
 After you have done this open up the [app.js](https://github.com/reb0und/nft-mint/blob/main/app.js) file. You must adjust the sale and mint functions for your collection. The determiner for if the sale is live or not will either be a boolean or an integer defined as a timestamp. This will countdown. You can specify your interval time for time between each check. Once either the sale is live or the time has been met, the mint function will trigger. You must adjust the script for your own mint function. This can be found by searching for `{"stateMutability": "payable"}` in your ABI. Replace the current mint function with this and you are good to go. 
 
-**Run `npm mint` to start**
-
-<3
+**Run `npm or yarn mint` to start**
